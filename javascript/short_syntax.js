@@ -1,5 +1,5 @@
-//SELECTING ELEMENT(S)
 
+//SELECTING ELEMENT(S)
 Object.prototype.el = function(el, where = document) {
 	const elems = where.querySelectorAll(el)
 	return elems.length > 1 ? [...elems] : elems[0]

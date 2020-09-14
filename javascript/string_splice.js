@@ -1,3 +1,4 @@
+
 String.prototype.splice = function(start, deleteCount, newSubString) {
 	return this.slice(0, start) + newSubString + this.slice(start + Math.abs(deleteCount));
 }
