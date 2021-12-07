@@ -1,7 +1,8 @@
 <?php
-	date_default_timezone_set("Africa/Johannesburg"); // Set relevant timezone
-	require('./write_to_file.php'); // import "writeToFile()" function
+	date_default_timezone_set("Africa/Johannesburg");
+	require('./write_to_file.php');
 
+	// Logs the date + IP + user agent + country + region + city + zip code + ISP + ISP organization + AS number
 	function logUser($log) {
 		$query = json_decode(file_get_contents('http://ip-api.com/json/' . $_SERVER['REMOTE_ADDR']));
 		if ($query && $query->status == 'success') {
